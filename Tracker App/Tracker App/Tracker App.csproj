@@ -275,9 +275,11 @@
     <Content Include="Images\l1.jpeg" />
     <Content Include="Images\l2.jpeg" />
     <Content Include="Images\l3.jpeg" />
+    <Content Include="Images\LOGIN.png" />
     <Content Include="Images\maxImg.png" />
     <Content Include="Images\new1.png" />
     <Content Include="Images\new.jpeg" />
+    <Content Include="Images\REGISTER.jpg" />
     <Content Include="Images\shreya.png" />
     <Content Include="Models\LineGraphModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -309,6 +311,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Login.css" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="gitignore.txt" />
     <Content Include="Web.config" />

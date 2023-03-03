@@ -267,6 +267,10 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\ab.png" />
+    <Content Include="Images\about1.jpg" />
+    <Content Include="Images\about2.jpg" />
+    <Content Include="Images\about3.jpg" />
+    <Content Include="Images\about4.jpg" />
     <Content Include="Images\addExpensepic.png" />
     <Content Include="Images\l1.jpeg" />
     <Content Include="Images\l2.jpeg" />

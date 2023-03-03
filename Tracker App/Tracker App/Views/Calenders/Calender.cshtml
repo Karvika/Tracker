@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Calender";
+}
+
+<h2>Calender</h2>
+<link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<input type="text" id="datepicker">
+<script>
+    $(function () {
+        $("#datepicker").datepicker({
+            dateFormat: "yy-mm-dd", // Set the date format
+            onSelect: function (dateText, inst) {
+                var date = $(this).datepicker('getDate');
+                console.log($.datepicker.formatDate('yy-mm-dd', date)); // Output the date in yyyy-dd-mm format to the console
+            }
+        });
+    });
+</script>
+

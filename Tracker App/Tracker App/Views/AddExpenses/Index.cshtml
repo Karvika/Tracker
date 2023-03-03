@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Tracker_App.Models.AddExpense>
+
+@{
+    ViewBag.Title = "Index";
+}
+<body>
+
+    <h2>The most expensive expenditure: @ViewBag.Max</h2>
+
+    <span>
+
+        @Html.ActionLink("Add your expense", "Create")
+    </span>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.expenseCategory.categoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.expenseAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.userEmail)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.expenseCategory.categoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.expenseAmount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.userEmail)
+                </td>
+                <td>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+        @Html.ActionLink("Details", "Details", new { id = item.id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.id })*@
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-success" })|
+                    @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-primary" })|
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</body>
+<style>
+    body {
+        /*font-size: 14px;*/
+        background-image: url(../../Images/maxImg.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 120%;
+      
+    }
+    table {
+        background-color: aliceblue;
+        /*opacity: 25%;*/
+        height: 100px;
+        width: 120px;
+        background-position: center center;
+        font-weight: bold;
+        color: black;
+    }
+    span{
+        color: blueviolet;
+        
+    }
+    h2{
+        font-weight:bolder;
+        color: black;
+        background-color : papayawhip;
+    }
+    span:hover{
+        color : red;
+        
+    }
+</style>

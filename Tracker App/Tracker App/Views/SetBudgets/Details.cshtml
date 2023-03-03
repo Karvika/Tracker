@@ -1,0 +1,57 @@
+﻿@model Tracker_App.Models.SetBudget
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SetBudget</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.expenseCategory.categoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.expenseCategory.categoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.budgetAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.budgetAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.userEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userEmail)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-image: url(../../Images/l2.jpeg);
+        /* background-color: lightgray;
+        text-align: center;
+        position: center center*/
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 150%;
+    }
+</style>

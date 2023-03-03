@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>
+        Expense Tracker
+    </h1>
+</div>
+
+<div class="row">
+    <div class="col-md-5">
+        <div>
+            <a class="btn btn-primary btn5" href="~/AddExpenses/Create">Add Expense</a>
+        </div>
+
+        <div>
+            <a class="btn btn-primary btn5" href="~/SetBudgets/Create">Set Monthly Budget</a>
+        </div>
+
+        <div>
+            <a class="btn btn-primary btn5" href="~/Graph/Index">Expense Graph</a>
+        </div>
+
+        <div>
+            <a class="btn btn-primary btn5" href="~/Home/About">Expense Rank</a>
+        </div>
+
+        <div>
+            <a class="btn btn-primary btn5" href="~/AddExpenses/Index">Most expensive expenditure</a>
+        </div>
+
+        <div>
+            <a class="btn btn-primary btn5" href="~/Calenders/Calender">Calender</a>
+        </div>
+    </div>
+    <div class="col-md-7">
+        <div class="frame">
+            <iframe src="~/AddExpenses/Trans" align="right"></iframe>
+        </div>
+        <div>
+            <a class="btn btn-primary" id="vm" href="~/AddExpenses/Index">View More</a>
+        </div>
+    </div>
+</div>
+
+
+<style>
+
+    h1 {
+        text-align: center;
+    }
+
+    body {
+        background-image: url(../../Images/shreya.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+    }
+
+    #vm {
+        padding: 20px 32px;
+        font-size: 20px;
+        object-position: bottom;
+        position: fixed;
+        width: 300px;
+        height: 60px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+        top: 85%;
+        bottom: 10%;
+        right: 33%;
+    }
+
+    .btn5 {
+        padding: 20px 32px;
+        font-size: 20px;
+        object-position: left;
+        width: 300px;
+        height: 72px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+    }
+
+    .frame {
+        position: fixed;
+        top: 29%;
+        right: 25%;
+        left: 30%;
+    }
+
+        .frame iframe {
+            width: 600px;
+            height: 500px;
+            border-style: none;
+        }
+</style>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TrackerDBModelStoreContainer" CdmEntityContainer="TrackerDBEntities">
+    <EntitySetMapping Name="AddExpenses">
+      <EntityTypeMapping TypeName="TrackerDBModel.AddExpens">
+        <MappingFragment StoreEntitySet="AddExpenses">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="categId" ColumnName="categId" />
+          <ScalarProperty Name="expenseAmount" ColumnName="expenseAmount" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="userEmail" ColumnName="userEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

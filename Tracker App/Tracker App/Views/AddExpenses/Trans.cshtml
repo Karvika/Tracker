@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Tracker_App.Models.AddExpense>
+
+@{
+    ViewBag.Title = "Trans";
+    Layout = null;
+}
+
+<h2>Last 4 Transactions</h2>
+
+
+<table class="table">
+    <tr id="heading">
+        <th>
+            @Html.DisplayNameFor(model => model.expenseCategory.categoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.expenseAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.userEmail)
+            </th>*@
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr id="cont">
+            <td>
+                @Html.DisplayFor(modelItem => item.expenseCategory.categoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.expenseAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.date)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.userEmail)
+                </td>*@
+
+        </tr>
+    }
+
+</table>
+
+<style>
+    #heading{
+        background-color:aqua;
+        font-size:15px;
+        height:10px;
+    }
+    #cont {
+        height: 15px;
+        font-size: 15px;
+    }
+    h2{
+        text-align:center;
+        
+    }
+    body {
+       
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+        overflow: hidden;
+    }
+
+    table {
+        background-color: aliceblue;
+        text-align: center;
+        height:100%;
+        width: 100%;
+        background-position: center center;
+        font-weight: bold;
+        color: black;
+
+    }
+</style>

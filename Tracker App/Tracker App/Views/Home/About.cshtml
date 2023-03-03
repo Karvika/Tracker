@@ -1,0 +1,201 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+<section class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="about-image4">
+                    <img src="../../Images/ab.png" alt="About Image 1">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-text">
+                    <h2 class="section-title">About Us</h2>
+                    <h3>Our Story</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id tellus id nunc congue vestibulum. Fusce nec turpis ipsum. Cras aliquam, arcu nec laoreet aliquam, velit velit luctus lectus, non feugiat justo dolor eget nibh. Aenean et ex ut mi consectetur molestie vel vel sapien. Vivamus sit amet lorem neque. Sed eget ipsum eu lorem pretium malesuada. Morbi varius dictum justo vel auctor.</p>
+                    <p>Integer semper euismod semper. Sed ullamcorper elit eu sem vulputate, at varius odio convallis. Aenean et vestibulum ex, vitae viverra purus. Maecenas vel mi leo. In varius augue sed velit dictum molestie. Nulla facilisi. Donec vel erat enim. Donec laoreet libero nec ligula consectetur vulputate.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="about-image1">
+                    <img src="../../Images/ab.png" alt="About Image 2">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="about-image2">
+                    <img src="../../Images/ab.png" alt="About Image 3">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="about-image3">
+                    <img src="../../Images/ab.png" alt="About Image 4">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    body{
+        background-color: antiquewhite
+    }
+    .about {
+        background-color: #f7f7f7;
+        padding: 80px 0;
+    }
+
+        .about .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .about h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    .about-image4 {
+        position: relative;
+        overflow: hidden;
+        height: 400px;
+        width: 500px
+    }
+
+        .about-image4 img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image4::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .about-image4:hover img {
+            transform: scale(1.1);
+        }
+
+        .about-image4:hover::before {
+            opacity: 1;
+        }
+    .about-image1 {
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+        width: 300px
+    }
+
+        .about-image1 img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .about-image1:hover img {
+            transform: scale(1.1);
+        }
+
+        .about-image1:hover::before {
+            opacity: 1;
+        }
+
+    .about-image2 {
+        position: relative;
+        overflow: hidden;
+        height : 300px;
+        width: 300px
+    }
+
+        .about-image2 img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image2::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .about-image2:hover img {
+            transform: scale(1.1);
+        }
+
+        .about-image2:hover::before {
+            opacity: 1;
+        }
+    .about-image3 {
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+        width: 300px
+    }
+    .about-image3 img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s ease;
+    }
+
+    .about-image3::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .about-image3:hover img {
+        transform: scale(1.1);
+    }
+
+    .about-image3:hover::before {
+        opacity: 1;
+    }
+</style>

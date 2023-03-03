@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@model Google.Apis.Calendar.v3.Data.Events
+
+<h2>Upcoming events:</h2>
+@if (Model.Items != null && Model.Items.Count > 0)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Summary</th>
+                <th>Start time</th>
+                <th>End time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var eventItem in Model.Items)
+            {
+                <tr>
+                    <td>@eventItem.Summary</td>
+                    <td>@eventItem.Start.DateTime</td>
+                    <td>@eventItem.End.DateTime</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No upcoming events found.</p>
+}

@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Tracker_App.Models.SetBudget>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Set your budget</h2>
+
+<p id=p1>
+    @Html.ActionLink("Create New Budget", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.expenseCategory.categoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.budgetAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userEmail)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.expenseCategory.categoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.budgetAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.userEmail)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<style>
+    body {
+        /*font-size: 14px;*/
+        background-color: antiquewhite;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 150%;
+    }
+
+    table {
+        background-color: aliceblue;
+        /*opacity: 25%;*/
+        height: 100px;
+        width: 120px;
+        background-position: center center;
+        font-weight: bold;
+        color: black;
+    }
+
+    span {
+        color: red;
+    }
+   #p1{
+       font-weight:bolder;
+       font-size: medium;
+   }
+
+    h2 {
+        font-weight: bolder;
+        color: black;
+       
+    }
+
+    /*span:hover {
+        color: red;
+    }*/
+    span:hover, span:active{
+        color : crimson;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
